@@ -8,6 +8,10 @@ class Navbar extends Component {
     return (
       <nav className="NavbarItems">
         <h1 className="navbar-logo">Trippy</h1>
+        <div className="menu-icons">
+          <i className="fas fa-bars"></i>
+          <i className="fas fa-times"></i>
+          </div>
 
         <ul className="nav-menu">
           {MenuItems.map((item, index)=>{
