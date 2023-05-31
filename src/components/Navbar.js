@@ -4,13 +4,19 @@ import { MenuItems } from "./MenuItems";
 import { Link } from "react-router-dom";
 
 class Navbar extends Component {
+  state = {clicked:false};
+  handleclick = () =>{
+    this. setState({clicked: !this.state.clicked})
+  }
+  
   render() {
     return (
       <nav className="NavbarItems">
-        <h1 className="navbar-logo">Trippy</h1>
-        <div className="menu-icons">
-          <i className="fas fa-bars"></i>
-          <i className="fas fa-times"></i>
+        <h1 className="navbar-logo">RAINBOW </h1>
+        
+        <div className="menu-icons"onClick={this.handleclick}>
+          <i className={this.state.clicked ?  "fas fa-times" : "fas fa-bars"}></i>
+          
           </div>
 
         <ul className="nav-menu">
