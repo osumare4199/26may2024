@@ -64,6 +64,9 @@ button:hover{
 }
 
 @media screen and (max-width: 850px){
+   .NavbarItems{
+       z-index: 99;
+   }
    .nav-menu {
     display:flex;
     flex-direction: column;
@@ -73,13 +76,17 @@ button:hover{
     height: auto;
     position: absolute;
     top: 0;
-    left: 0;
-    opacity: 1;
+    left: -100%;
+    opacity: 0;
     align-items: stretch;
     padding: 80px 0 30px 0;
     margin: 0;
-    
-    
+    z-index: -1;
+}
+.nav-menu.active{
+    left: 0;
+     opacity: 1;
+     z-index: -1;
     
 }
 
@@ -113,5 +120,6 @@ button{
     font-weight: 700;
     letter-spacing: 2px;
 }
+
 
 }
