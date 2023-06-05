@@ -1,7 +1,7 @@
- function Service (){
+function Service (){
     return(
         <>
-         <h1>This is Service</h1>
+        <h1>This is Service</h1>
         </>
     )
 }
