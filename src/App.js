@@ -1,5 +1,4 @@
 import "./styles.css";
-import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import About from "./routes/About";
 import Service from "./routes/Service";
@@ -16,7 +15,7 @@ export default function App() {
          <Route path="/Service" element={<Service/>}/>
           <Route path="/Contact" element={<Contact/>}/>
       </Routes>
-      <Navbar />
+    
       <Home/>
       
     </div>
