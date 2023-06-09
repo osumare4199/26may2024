@@ -1,12 +1,19 @@
 import "./HeroStyles.css";
 
-function Hero() {
+function Hero(props) {
     return(<>
-    <div className="hero">
-        <img alt="herpImg" src="https://images.unsplash.com/photo-1611918126831-0a8352d6196f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bmF0dXJlJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"/>
+    <div className={props.cName}>
+        <img alt="herpImg" src={props.heroImg}/>
+        <div className="hero-text">
+            <h1>{props.title}</h1>
+            <p>{props.text}</p>
+            <a href={props.url} className={props.btnClass}>
+                {props.buttonText}
+            </a>
     
     </div>
-    </>
+    </div>
+    </> 
     );
 }
 export default Hero;
